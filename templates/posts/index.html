@@ -1,0 +1,15 @@
+{% extends 'layouts/app.html' %}
+{% include 'shared/_nav.html' %}
+{% block body %}
+<h1>Blog({{posts|length}} posts)</h1>
+
+ {% for posts in posts %}
+ <article>
+    <h2><a href="{{url_for('show_posts',id =posts.id)}}">#{{posts.id}}-{{posts.title}}</a> </h2>
+        <p>This is {{posts.Content}} </p>
+</article>
+<hr>  
+
+{% endfor %}
+
+ {% endblock %}  
