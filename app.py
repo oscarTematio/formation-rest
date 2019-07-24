@@ -26,7 +26,7 @@ def show_posts(id):
     print(id)
     post= Post.find(id)
     post=posts[id-1]
-    return render_template("posts/ssssshow.html",post =post)
+    return render_template("posts/show.html",post =post)
 
 @app.errorhandler(404)
 def page_not_found(error):
